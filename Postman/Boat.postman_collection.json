@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "9b41bc46-7291-421f-bd20-941c4f0c1c01",
+		"name": "Boat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46917293",
+		"_collection_link": "https://rovic-5921201.postman.co/workspace/LalusinWSEx1~8468e060-5997-4d8f-911e-20f730edf88d/collection/46917293-9b41bc46-7291-421f-bd20-941c4f0c1c01?action=share&source=collection_link&creator=46917293"
+	},
+	"item": [
+		{
+			"name": "Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"bid\": 1,\n  \"name\": \"Titanic\",\n  \"color\": \"White\",\n  \"length\": 80\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/bms/boat/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"bms",
+						"boat",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/bms/boat/list/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"bms",
+						"boat",
+						"list",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

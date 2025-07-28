@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "1beab259-3827-40a0-afd8-5218f53a45c9",
+		"name": "Reservation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46917293",
+		"_collection_link": "https://rovic-5921201.postman.co/workspace/LalusinWSEx1~8468e060-5997-4d8f-911e-20f730edf88d/collection/46917293-1beab259-3827-40a0-afd8-5218f53a45c9?action=share&source=collection_link&creator=46917293"
+	},
+	"item": [
+		{
+			"name": "Insert a new reservation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"sid\": 2,\n  \"bid\": 1,\n  \"date\": \"2025-07-28\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/bms/reservation/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"bms",
+						"reservation",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a single reservation by ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"sid\": 1,\n  \"bid\": 2,\n  \"day\": \"2025-07-30\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/bms/reservation/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"bms",
+						"reservation",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get reservations for a specific boat",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"sid\": 1,\n  \"bid\": 2,\n  \"day\": \"2025-07-30\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/bms/reservation/boat/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"bms",
+						"reservation",
+						"boat",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

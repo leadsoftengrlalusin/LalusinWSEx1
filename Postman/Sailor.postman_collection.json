@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "21f610f7-18db-44e8-98e7-6e3b55450885",
+		"name": "Sailor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46917293",
+		"_collection_link": "https://rovic-5921201.postman.co/workspace/LalusinWSEx1~8468e060-5997-4d8f-911e-20f730edf88d/collection/46917293-21f610f7-18db-44e8-98e7-6e3b55450885?action=share&source=collection_link&creator=46917293"
+	},
+	"item": [
+		{
+			"name": "List All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/bms/sailor/list/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"bms",
+						"sailor",
+						"list",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"sid\": 99,\n  \"name\": \"John\",\n  \"rating\": 20,\n  \"age\": 35\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/bms/sailor/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"bms",
+						"sailor",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Name",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/bms/sailor/update/name?sid=99&name=Johnny",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"bms",
+						"sailor",
+						"update",
+						"name"
+					],
+					"query": [
+						{
+							"key": "sid",
+							"value": "99"
+						},
+						{
+							"key": "name",
+							"value": "Johnny"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update All",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"sid\": 99,\n  \"name\": \"Jonathan\",\n  \"rating\": 30,\n  \"age\": 40\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/bms/sailor/update/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"bms",
+						"sailor",
+						"update",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/bms/sailor/delete/99",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"bms",
+						"sailor",
+						"delete",
+						"99"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
