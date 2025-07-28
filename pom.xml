@@ -71,6 +71,13 @@
 			<version>${yasson.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>jakarta.annotation</groupId>
+			<artifactId>jakarta.annotation-api</artifactId>
+			<version>2.1.1</version>
+		</dependency>
+
+
 		<!-- Servlet API (needed for WAR deployment) -->
 		<dependency>
 			<groupId>jakarta.servlet</groupId>
@@ -80,40 +87,40 @@
 		</dependency>
 
 	</dependencies>
-	
-  <build>
-      <sourceDirectory>src/main/java</sourceDirectory>
-      <testSourceDirectory>src/test/java</testSourceDirectory>
-      <plugins>
-           <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.14.0</version>
-                <configuration>
-                    <encoding>utf-8</encoding>
-                    <release>23</release>
-                </configuration>
-           </plugin>
-           
-           <!-- WAR Maven Generator Plugin -->
-           <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-    			<artifactId>maven-war-plugin</artifactId>
-                <version>3.4.0</version>
-           </plugin>
-           
-           <!-- Maven Deployment  Plugin-->
-           <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>2.2</version>
-                <configuration>
-                    <server>TomcatServer</server>
-                    <url>http://localhost:8082/manager/text</url>
-                    <path>/mssr</path>
-                </configuration>
-           </plugin>
-      </plugins>
-  </build>
-	
+
+	<build>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<testSourceDirectory>src/test/java</testSourceDirectory>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.14.0</version>
+				<configuration>
+					<encoding>utf-8</encoding>
+					<release>23</release>
+				</configuration>
+			</plugin>
+
+			<!-- WAR Maven Generator Plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.4.0</version>
+			</plugin>
+
+			<!-- Maven Deployment  Plugin-->
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<server>TomcatServer</server>
+					<url>http://localhost:8082/manager/text</url>
+					<path>/bms</path>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 </project>
